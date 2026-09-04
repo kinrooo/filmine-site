@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filmine — 隐私政策 / Privacy Policy</title>
+<style>
+  /* 品牌红线(CLAUDE.md 设计原则 3 / design/tokens.json):Portra 黄只标
+     active / selected / developing,严禁装饰性使用。静态页面没有任何 active
+     状态,所以标题/标语/导航一律走 paper 层级,层次由 weight + opacity 建立。
+     --portra 保留在 token 表里仅供 CTA 使用(见 support.html 的 .mail)。 */
+  :root{--ink:#0A0A0A;--paper:#FAFAFA;--portra:#FAC775;--muted:rgba(250,250,250,.62);--rule:rgba(250,250,250,.12)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--paper);
+       font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:64px 24px 96px}
+  h1{font-size:28px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px}
+  .brand{font-style:italic;color:rgba(250,250,250,.55);font-size:15px;margin:0 0 40px}
+  h2{font-size:15px;font-weight:600;color:rgba(250,250,250,.92);margin:36px 0 10px;letter-spacing:.02em}
+  p{color:var(--muted);margin:0 0 12px}
+  .lede{color:rgba(250,250,250,.92);font-size:17px;font-weight:500;margin:0 0 32px}
+  hr{border:0;border-top:1px solid var(--rule);margin:48px 0}
+  a{color:var(--paper)}
+  .meta{color:rgba(250,250,250,.32);font-size:13px;margin-top:40px}
+  .lang{font-size:13px;color:rgba(250,250,250,.45);margin-bottom:48px}
+  .lang a{color:rgba(250,250,250,.72);text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>隐私政策</h1>
+  <p class="brand">Filmine — let it develop</p>
+  <p class="lang"><a href="#en">English version below ↓</a></p>
+
+  <p class="lede">一句话：你的照片不会离开这台设备。</p>
+
+  <h2>我们不会自动收集任何数据</h2>
+  <p>Filmine 没有账号、没有服务器、没有统计分析、没有第三方 SDK。应用不会上传你的照片，也不会上传你的使用记录或设备信息。</p>
+  <p>会用到网络的只有两类情形。一是你写邮件给我们。二是与 Apple App Store（StoreKit）的通信：当你打开会员页或方案页、购买、恢复购买时，应用会向 App Store 读取方案价格与你的购买状态；此外系统本身会校验你的购买凭据。这些通信发生在你的设备与 Apple 之间，Filmine 没有任何服务器可以接收数据（见下文「购买与支付」）。</p>
+  <p>写邮件给我们时：应用里有两处可以发起 —— 抽屉的「反馈」页，以及「装帧」页在购买或恢复出错时的「联系支持」。两处预填的内容完全一致：应用版本、设备型号与系统版本，由你的邮件应用发送。这些内容发送前可自行修改或删除；不发送就不会有任何信息离开这台设备。我们只会用它来定位你所报告的问题。</p>
+
+  <h2>照片如何被处理</h2>
+  <p>所有的胶片、人像与装帧处理都在你的设备本地完成。显影结果作为一张新的实况照片保存回你的相册，原始照片不会被修改或删除。</p>
+
+  <h2>相册权限</h2>
+  <p>读取权限用于打开你选中的那张实况照片；写入权限用于把显影结果存回相册。Filmine 只在你主动选片和保存时使用这些权限，不会在后台浏览你的相册。</p>
+
+  <h2>关于 iCloud 照片</h2>
+  <p>如果你选中的照片尚未下载到本机，系统会从你自己的 iCloud 照片图库取回原图。这是 iOS 提供的系统能力，过程发生在你的设备与 Apple 之间，Filmine 不参与也无法读取。</p>
+
+  <h2>购买与支付</h2>
+  <p>装帧的解锁（年订阅或永久解锁）经由 Apple App Store 完成，走的是系统自带的购买流程。付款方式、账单信息与 Apple 账户全部由 Apple 处理和保存：Filmine 既不接触也不存储任何支付信息，也读不到你的 Apple 账户标识。应用本地只保留装帧权益的记录（是否已永久解锁、永久解锁的原始购买日期、年订阅的有效期边界，以及对应订阅的交易标识——仅用于识别是不是同一笔订阅，不含账户信息），用于没有网络时也能正确显示状态。其中购买日期只用来在权益票据上写一行「自某日起」，不参与是否解锁的判断，也不会上传；权益被撤销时一并清除。如果一笔购买正在等待家长批准或外部确认，应用还会临时记下是哪个商品、什么时候发起的，用于避免重复扣费；这条记录满 24 小时后失效，会在下一次启动或权益刷新时清除，卸载应用即全部清除。恢复购买与管理订阅同样由系统界面完成。</p>
+
+  <h2>设备上存了什么</h2>
+  <p>只有两项，都不含任何个人信息：一是手势提示的显示次数，用于判断某个操作提示是否还需要出现；二是装帧购买权益的本地记录（是否已永久解锁、永久解锁的原始购买日期、年订阅的有效期边界，以及对应订阅的交易标识——仅用于识别是不是同一笔订阅，不含账户信息；如有正在等待家长批准或外部确认的购买，还会临时记下该商品与发起时刻，满 24 小时后于下一次启动或权益刷新时清除），用于没有网络时也能正确显示与放行。它们保存在应用自己的偏好设置里，删除应用即一并清除。</p>
+
+  <h2>儿童隐私</h2>
+  <p>Filmine 不面向儿童设计，也不会自动收集任何用户数据，因此不存在自动收集儿童个人信息的情形。与上文一致，唯一的例外是用户主动发送的邮件（从「反馈」页，或「装帧」页在购买或恢复出错时的「联系支持」）；如果使用者是儿童，请由家长或监护人代为发送。</p>
+
+  <h2>政策变更</h2>
+  <p>若未来版本引入任何改变上述事实的功能，我们会在应用内与本页面同步更新说明，并在版本更新记录中注明。</p>
+
+  <h2>联系我们</h2>
+  <p>对隐私政策有疑问，或发现任何与本页描述不符的行为，请联系 <a href="mailto:hello@filmine.app">hello@filmine.app</a>。</p>
+
+  <p class="meta">最后更新：2026 年 9 月</p>
+
+  <hr>
+
+  <h1 id="en">Privacy Policy</h1>
+  <p class="brand">Filmine — let it develop</p>
+
+  <p class="lede">In one line: your photos never leave your device.</p>
+
+  <h2>We collect nothing automatically</h2>
+  <p>Filmine has no accounts, no servers, no analytics, and no third-party SDKs. The app never uploads your photos, your usage, or information about your device.</p>
+  <p>Only two kinds of thing involve the network. One is writing us an email. The other is communication with the Apple App Store (StoreKit): when you open the membership or plans page, make a purchase, or restore purchases, the app asks the App Store for plan prices and your purchase status; separately, the system itself validates your purchase receipts. That traffic is between your device and Apple &mdash; Filmine has no server of its own that could receive any of it (see &ldquo;Purchases and payment&rdquo; below).</p>
+  <p>About writing to us: there are two places in the app that start an email &mdash; the Feedback page, and the &ldquo;Contact support&rdquo; action on the Frames page when a purchase or restore goes wrong. Both pre-fill exactly the same things: the app version, your device model, and your iOS version, and the draft is sent by your own mail app. You can edit or delete any of it before sending, and if you do not send it, nothing leaves your device. We use it only to track down the problem you are reporting.</p>
+
+  <h2>How photos are processed</h2>
+  <p>All film, portrait, and framing work happens locally on your device. The developed result is saved back to your library as a new Live Photo; your original photo is never modified or deleted.</p>
+
+  <h2>Photo library permissions</h2>
+  <p>Read access is used to open the one Live Photo you pick. Write access is used to save the developed result back to your library. Filmine uses these permissions only when you actively pick a photo or save a result — it never browses your library in the background.</p>
+
+  <h2>About iCloud Photos</h2>
+  <p>If the photo you pick has not been downloaded to your device, the system fetches the original from your own iCloud Photos library. That is an iOS capability that operates between your device and Apple; Filmine neither participates in nor can read that exchange.</p>
+
+  <h2>Purchases and payment</h2>
+  <p>Unlocking the frames (yearly subscription or lifetime unlock) goes through the Apple App Store using the system's own purchase flow. Your payment method, billing details, and Apple Account are handled and stored entirely by Apple: Filmine neither touches nor stores any payment information, and cannot read your Apple Account identifier. The only thing kept locally is a record of your frame entitlement (whether the lifetime unlock is owned, the original purchase date of that lifetime unlock, the expiry boundary of the yearly subscription, and that subscription&rsquo;s transaction identifier &mdash; used only to tell whether it is the same subscription, and containing no account information), so the app shows the right state when you are offline. The purchase date is used only to print a &ldquo;since&rdquo; line on your entitlement receipt: it plays no part in deciding what is unlocked, it is never uploaded, and it is cleared along with the entitlement if that entitlement is revoked. If a purchase is waiting on a parent&rsquo;s approval or an external confirmation, the app also notes which product it was and when it started, so that you are not charged twice; once that note is more than 24 hours old it is cleared the next time the app launches or refreshes your entitlement, and deleting the app clears it outright. Restoring purchases and managing your subscription also happen in the system's own interface.</p>
+
+  <h2>What is stored on your device</h2>
+  <p>Exactly two things, neither containing personal information: a count of how many times each gesture hint has been shown, used to decide whether a hint is still needed; and a local record of your frame entitlement (whether the lifetime unlock is owned, the original purchase date of that lifetime unlock, the expiry boundary of the yearly subscription, and that subscription&rsquo;s transaction identifier &mdash; used only to tell whether it is the same subscription, and containing no account information; plus, while a purchase is waiting on a parent&rsquo;s approval or an external confirmation, which product it was and when it started, cleared once it is more than 24 hours old, on the next launch or entitlement refresh), so the app shows and allows the right thing when you are offline. Both live in the app&rsquo;s own preferences and are removed when you delete the app.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Filmine is not directed at children, and it collects no user data automatically, so it does not automatically collect personal information from children. As above, the one exception is an email the user chooses to send &mdash; from the Feedback page, or via &ldquo;Contact support&rdquo; on the Frames page when a purchase or restore goes wrong; if the user is a child, a parent or guardian should send it on their behalf.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If a future version introduces anything that changes the facts above, we will update both the in-app copy and this page, and note it in the release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy, or anything that does not match what is described here: <a href="mailto:hello@filmine.app">hello@filmine.app</a>.</p>
+
+  <p class="meta">Last updated: September 2026</p>
+
+</div>
+</body>
+</html>

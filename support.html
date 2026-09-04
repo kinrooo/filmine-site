@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filmine — 支持 / Support</title>
+<style>
+  /* 品牌红线(CLAUDE.md 设计原则 3 / design/tokens.json):Portra 黄只标
+     active / selected / developing,严禁装饰性使用。静态页面没有任何 active
+     状态,所以标题/标语/导航一律走 paper 层级,层次由 weight + opacity 建立。
+     E1 裁决后(2026-08-31,方案 B)连 CTA 也不用黄 —— 本页已无 Portra 用例,
+     token 保留仅为与 App 调色板对齐。 */
+  :root{--ink:#0A0A0A;--paper:#FAFAFA;--muted:rgba(250,250,250,.62);--rule:rgba(250,250,250,.12)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--paper);
+       font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:64px 24px 96px}
+  h1{font-size:28px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px}
+  .brand{font-style:italic;color:rgba(250,250,250,.55);font-size:15px;margin:0 0 40px}
+  h2{font-size:15px;font-weight:600;color:rgba(250,250,250,.92);margin:36px 0 10px;letter-spacing:.02em}
+  p{color:var(--muted);margin:0 0 12px}
+  hr{border:0;border-top:1px solid var(--rule);margin:48px 0}
+  a{color:var(--paper)}
+  /* E1 裁决(2026-08-31,方案 B):CTA 也不用 Portra —— 黄色在全品牌严格等于
+     active/选中/显影中状态。行动感由描边承担。 */
+  .mail{display:inline-block;margin:8px 0 4px;padding:13px 22px;border-radius:8px;
+        background:transparent;color:var(--paper);text-decoration:none;font-weight:600;
+        border:1px solid rgba(250,250,250,.34);
+        font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .lang{font-size:13px;color:rgba(250,250,250,.45);margin-bottom:48px}
+  .lang a{color:rgba(250,250,250,.72);text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>支持</h1>
+  <p class="brand">Filmine — let it develop</p>
+  <p class="lang"><a href="#en">English version below ↓</a></p>
+
+  <h2>联系我们</h2>
+  <p>遇到问题、想要某支胶片或某种装帧、或者只是想说说用下来的感觉，都欢迎写信过来。</p>
+  <p><a class="mail" href="mailto:hello@filmine.app">hello@filmine.app</a></p>
+  <p>写信时如果能附上应用版本、设备型号与系统版本，会让问题定位快很多。应用内「反馈」页的邮件按钮会自动预填这些信息。</p>
+
+  <h2>常见问题</h2>
+
+  <p><strong>为什么我的照片选不了？</strong><br>
+  Filmine 只处理实况照片（Live Photo）。普通静态照片、截图和视频都不会出现在选择器里。</p>
+
+  <p><strong>显影后原来的照片还在吗？</strong><br>
+  在。显影结果始终是新的一张，Filmine 不会修改或删除你相册里的原始照片。</p>
+
+  <p><strong>为什么保存要等一会儿？</strong><br>
+  实况照片是一张照片加一段视频，装帧和滤镜需要逐帧处理视频部分并重新封装，因此比处理静态照片慢。素材越长、分辨率越高越明显。</p>
+
+  <p><strong>保存的结果还是实况照片吗？</strong><br>
+  是。动效和声音都保留，在相册里长按依然会播放。</p>
+
+  <p><strong>提示没有权限怎么办？</strong><br>
+  打开 iOS「设置 → Filmine → 照片」，选择「完整访问权限」。如果选了「选中的照片」，需要把想编辑的那张加入允许列表。</p>
+
+  <h2>系统要求</h2>
+  <p>iPhone，iOS 18.0 或更高版本。</p>
+
+  <hr>
+
+  <h1 id="en">Support</h1>
+  <p class="brand">Filmine — let it develop</p>
+
+  <h2>Contact</h2>
+  <p>Bug reports, requests for a particular film stock or frame, or just thoughts on how it feels to use — all welcome.</p>
+  <p><a class="mail" href="mailto:hello@filmine.app">hello@filmine.app</a></p>
+  <p>Including your app version, device model, and iOS version makes problems much faster to track down. The mail button on the app's Feedback page pre-fills all three.</p>
+
+  <h2>Frequently asked</h2>
+
+  <p><strong>Why can't I pick my photo?</strong><br>
+  Filmine works with Live Photos only. Ordinary stills, screenshots, and videos do not appear in the picker.</p>
+
+  <p><strong>Is my original photo still there after developing?</strong><br>
+  Yes. The result is always a new photo; Filmine never modifies or deletes the original in your library.</p>
+
+  <p><strong>Why does saving take a moment?</strong><br>
+  A Live Photo is a still plus a short video. Frames and filters have to be applied to every video frame and the result re-packaged, which takes longer than processing a still. Longer, higher-resolution clips take longer still.</p>
+
+  <p><strong>Is the saved result still a Live Photo?</strong><br>
+  Yes. Motion and sound are preserved, and press-and-hold in Photos still plays it.</p>
+
+  <p><strong>It says I haven't granted permission.</strong><br>
+  Open iOS Settings → Filmine → Photos and choose Full Access. If you picked Limited, add the photo you want to edit to the allowed set.</p>
+
+  <h2>Requirements</h2>
+  <p>iPhone, iOS 18.0 or later.</p>
+
+</div>
+</body>
+</html>
