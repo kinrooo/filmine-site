@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Edit a Live Photo Without Losing the Motion</title>
+<meta name="description" content="Most editors flatten a Live Photo into a still. Here is what actually happens, how to test any app in 30 seconds, and how to keep the motion and sound.">
+<link rel="canonical" href="https://filmine.app/guides/edit-live-photo-keep-motion.html">
+<meta name="apple-itunes-app" content="app-id=6808844703">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Filmine">
+<meta property="og:title" content="How to Edit a Live Photo Without Losing the Motion">
+<meta property="og:description" content="Most editors flatten a Live Photo into a still. Here is what actually happens, how to test any app in 30 seconds, and how to keep the motion and sound.">
+<meta property="og:url" content="https://filmine.app/guides/edit-live-photo-keep-motion.html">
+<meta property="og:image" content="https://filmine.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to edit a Live Photo without losing the motion","description":"Most editors flatten a Live Photo into a still. Here is what actually happens, how to test any app in 30 seconds, and how to keep the motion and sound.","inLanguage":"en","datePublished":"2026-09-22","dateModified":"2026-09-22","author":{"@type":"Organization","name":"Filmine","url":"https://filmine.app/"},"publisher":{"@type":"Organization","name":"Filmine","url":"https://filmine.app/"},"mainEntityOfPage":"https://filmine.app/guides/edit-live-photo-keep-motion.html","about":{"@type":"SoftwareApplication","name":"Filmine — Live Photo Darkroom","operatingSystem":"iOS","applicationCategory":"PhotographyApplication","url":"https://apps.apple.com/app/id6808844703"}}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="wordmark" href="../">Filmine</a>
+    <nav>
+      <a href="../#how">How it works</a>
+      <a href="./">Guides</a>
+      <a href="../support.html">Support</a>
+      <a href="../press.html">Press</a>
+    </nav>
+  </header>
+  <article>
+  <p class="dateline mono">GUIDE · SEPTEMBER 2026</p>
+<h1>How to edit a Live Photo without losing the motion</h1>
+
+<p>The short answer: most photo editors flatten a Live Photo into a still, so to keep the motion you need an editor that writes a <strong>new Live Photo</strong> rather than a new JPEG. A Live Photo is not one image — it is a key still plus roughly three seconds of video and audio, bound together by metadata. When an app opens it, edits the still, and exports, the video half is usually dropped. If you want the motion, the sound and the long-press replay to survive, choose a tool that processes every frame and hands back a complete Live Photo. Filmine is built to do exactly that, and nothing else.</p>
+
+<h2>Why a Live Photo is so easy to break</h2>
+
+<p>When you press the shutter with Live Photos on, your iPhone saves two linked assets: a full-resolution still (the key frame) and a short movie with audio. The Photos library keeps an identifier that ties them together. Long-pressing the thumbnail tells the system to play the movie instead of showing the still.</p>
+
+<p>That pairing is fragile in a very specific way. Almost every editing pipeline in the world is built for single images: load pixels, apply an adjustment, save pixels. Feed a Live Photo into that pipeline and one of three things happens.</p>
+
+<ul>
+  <li><strong>It exports a still.</strong> The edit looks right, but long-pressing does nothing — the motion is gone for good in the exported copy.</li>
+  <li><strong>It edits the key frame only.</strong> The file still moves, but the still and the video no longer match, so the picture visibly jumps in colour the moment playback starts.</li>
+  <li><strong>It refuses to open it.</strong> Some apps simply do not list Live Photos as editable items.</li>
+</ul>
+
+<p>None of these are bugs, exactly. They are the natural result of treating a two-part asset as a one-part asset.</p>
+
+<h2>What happens in the apps you probably already have</h2>
+
+<p>The Photos app on iOS is the safest of the mainstream options, because Apple wrote both halves. Adjustments you make there are applied to the still, and, depending on the iOS version, the Live effect may be turned off by the edit or converted to a still when you export or share the result. There is also a separate <strong>Live Off</strong> control that disables motion deliberately — it is easy to leave switched on without noticing. Photos also lets you choose a different key frame, which changes the cover without touching the look of the clip.</p>
+
+<p>Beyond Photos, be cautious. Many editors — including well-known film-simulation and professional-grade apps — accept a Live Photo from the picker but save a flat image. Some apps offer a "save as video" option instead, which keeps the movement but produces an MP4 that no longer behaves like a Live Photo in your library: no long-press bounce, no Loop, no key-frame picker. Rather than trusting memory or a review from two years ago, test each app once with a throwaway shot and check whether the result still animates.</p>
+
+<h2>A reliable way to test any editor in thirty seconds</h2>
+
+<ol>
+  <li>Shoot a deliberately motion-heavy Live Photo — a hand waving, steam rising, a dog turning its head.</li>
+  <li>Edit it in the app you are evaluating and save.</li>
+  <li>Find the saved result in Photos. Look for the <strong>LIVE</strong> badge in the top-left corner.</li>
+  <li>Press and hold. If it plays with sound, the motion survived. If it sits still, the app flattened it.</li>
+  <li>Check the colour at the moment playback starts. A sudden shift means the still was edited but the video was not.</li>
+</ol>
+
+<p>That last step matters more than people expect. A file can pass the "it still moves" test and still look wrong, because the cover frame and the clip were graded differently.</p>
+
+<h2>What a proper Live Photo editor has to do</h2>
+
+<p>To keep motion honestly, an editor needs to apply the same look to the key still <strong>and</strong> every frame of the video, keep the audio, and write the pair back out as a new Live Photo with fresh metadata. It also has to be consistent frame to frame — a grade that drifts slightly between frames shows up as flicker, which is far more visible in motion than in a still.</p>
+
+<p>That is the whole design brief behind <strong>Filmine</strong>, a Live Photo darkroom for iPhone. It only accepts Live Photos — ordinary stills do not appear in its picker, which is intentional rather than a limitation. It processes the still and the clip together, preserves the sound, and always saves a <strong>new</strong> Live Photo: your original is never modified or overwritten. Because there is real per-frame work to do, export takes a few seconds rather than being instant.</p>
+
+<p>The toolset is deliberately small. There are eleven film stocks, each with just two sliders — <strong>Intensity</strong> and <strong>Texture</strong> — where texture covers the grain character rather than exposing a separate grain control. There are five portrait presets with two sliders of their own, subject fill and background fade. And there are ten frames plus a no-frame option, with no parameters to fiddle with. Film and portrait are free; three frames (None, Polara and Signature) are free too, and the remaining eight are unlocked by subscription with a seven-day trial for new users, or by a one-time purchase.</p>
+
+<p>Everything runs on the device. There is no account, no server, no analytics and no data collection — the photographs never leave your iPhone. Filmine requires iOS 18 or later and runs on iPhone only; there is no iPad, Mac or Android version, and it does not do collage, free-form cropping, video trimming, custom text or AI generation.</p>
+
+<h2>The practical rule</h2>
+
+<p>If the motion matters to you, do the editing before you share, keep the original untouched, and verify with a long press every time you try a new app. A Live Photo that no longer moves cannot be repaired afterwards — the video half is simply not in the exported file.</p>
+
+<p class="cta">Want to grade the whole clip instead of just the cover frame? <a href="https://apps.apple.com/app/id6808844703">Get Filmine on the App Store</a> — Filmine — Live Photo Darkroom, free on the App Store.</p>
+  </article>
+  <footer>
+    <div class="sig">the film is mine, let it develop</div>
+    <div class="row">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../support.html">Support</a>
+      <a href="../press.html">Press kit</a>
+      <a href="./">Guides</a>
+      <a href="https://apps.apple.com/app/id6808844703">App Store</a>
+      <a href="mailto:hello@filmine.app">hello@filmine.app</a>
+    </div>
+    <div>© 2026 Filmine. Live Photos, iPhone and App Store are trademarks of Apple Inc. Filmine is an independent app and is not affiliated with Apple.</div>
+  </footer>
+</div>
+</body>
+</html>

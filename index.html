@@ -1,44 +1,173 @@
 <!doctype html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Filmine</title>
-<style>
-  /* 品牌红线(CLAUDE.md 设计原则 3):Portra 黄只标 active / selected /
-     developing。落地页没有任何 active 状态,因此全走 paper 层级,层次由
-     weight + opacity 建立,行动感由描边承担。 */
-  :root{--ink:#0A0A0A;--paper:#FAFAFA;--rule:rgba(250,250,250,.34)}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--ink);color:var(--paper);
-       font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",sans-serif;
-       -webkit-font-smoothing:antialiased;
-       min-height:100vh;display:flex;align-items:center;justify-content:center}
-  .wrap{max-width:680px;padding:64px 24px;text-align:center}
-  h1{font-size:28px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px}
-  .brand{font-style:italic;color:rgba(250,250,250,.55);font-size:15px;margin:0 0 8px}
-  .line{color:rgba(250,250,250,.62);font-size:15px;margin:0}
-  .line.en{color:rgba(250,250,250,.45);margin:0 0 40px}
-  nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  nav a{display:inline-block;padding:13px 22px;border-radius:8px;
-        color:var(--paper);text-decoration:none;font-weight:600;font-size:14px;
-        border:1px solid var(--rule);
-        font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  .mail{margin-top:40px;font-size:13px;color:rgba(250,250,250,.32)}
-  .mail a{color:rgba(250,250,250,.55)}
-</style>
+<title>Filmine — Live Photo Darkroom for iPhone</title>
+<meta name="description" content="Filmine is a digital darkroom for Live Photos. Film looks, portrait light and paper frames, developed on your iPhone and saved as a new Live Photo — motion and sound stay.">
+<link rel="canonical" href="https://filmine.app/">
+<meta name="apple-itunes-app" content="app-id=6808844703">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Filmine">
+<meta property="og:title" content="Filmine — Live Photo Darkroom">
+<meta property="og:description" content="Film looks, portrait light and paper frames for Live Photos. Developed on your iPhone. Motion and sound stay.">
+<meta property="og:url" content="https://filmine.app/">
+<meta property="og:image" content="https://filmine.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Filmine — Live Photo Darkroom">
+<meta name="twitter:description" content="Film looks, portrait light and paper frames for Live Photos. Developed on your iPhone. Motion and sound stay.">
+<meta name="twitter:image" content="https://filmine.app/assets/og.png">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Filmine — Live Photo Darkroom",
+  "alternateName": "Filmine",
+  "operatingSystem": "iOS 18.0 or later",
+  "applicationCategory": "PhotographyApplication",
+  "description": "A digital darkroom for Live Photos. Film looks, portrait light and paper frames, developed on your iPhone and saved as a new Live Photo with motion and sound.",
+  "url": "https://filmine.app/",
+  "installUrl": "https://apps.apple.com/app/id6808844703",
+  "downloadUrl": "https://apps.apple.com/app/id6808844703",
+  "image": "https://filmine.app/assets/filmine-icon-1024.png",
+  "screenshot": [
+    "https://filmine.app/assets/shot-01-home.jpg",
+    "https://filmine.app/assets/shot-02-film.jpg",
+    "https://filmine.app/assets/shot-04-frame.jpg"
+  ],
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free"},
+  "inLanguage": ["en", "zh-Hans", "zh-Hant", "ja", "ko"],
+  "author": {"@type": "Organization", "name": "Filmine", "url": "https://filmine.app/", "email": "hello@filmine.app"}
+}
+</script>
 </head>
 <body>
 <div class="wrap">
-  <h1>Filmine</h1>
-  <p class="brand">let it develop</p>
-  <p class="line">实况照片的数字暗房。所有处理都在你的设备上完成。</p>
-  <p class="line en">A digital darkroom for Live Photos. Everything happens on your device.</p>
-  <nav>
-    <a href="privacy.html">隐私政策 · Privacy</a>
-    <a href="support.html">支持 · Support</a>
-  </nav>
-  <p class="mail"><a href="mailto:hello@filmine.app">hello@filmine.app</a></p>
+  <header class="top">
+    <a class="wordmark" href="./">Filmine</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="guides/">Guides</a>
+      <a href="support.html">Support</a>
+      <a href="press.html">Press</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="border-top:0">
+    <div>
+      <p class="tagline wordmark">let it develop</p>
+      <h1>A darkroom for<br>Live Photos.</h1>
+      <p class="lede">Film looks, portrait light and paper frames. Developed on your iPhone and saved as a new Live Photo — the motion and the sound stay.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://apps.apple.com/app/id6808844703">Download on the App Store</a>
+        <span class="meta">Free · iPhone · iOS 18 or later</span>
+      </div>
+    </div>
+    <div class="shots">
+      <img src="assets/shot-01-home.jpg" alt="Filmine home screen with the developing Polara paper" width="1320" height="2868">
+      <img src="assets/shot-02-film.jpg" alt="Fireworks Live Photo with the Gold 160 film look, intensity and texture sliders" width="1320" height="2868" loading="eager">
+      <img src="assets/shot-04-frame.jpg" alt="The same fireworks on a Card paper frame with date and signature" width="1320" height="2868" loading="eager">
+    </div>
+  </section>
+
+  <section id="how">
+    <p class="kicker">Why a darkroom, not a filter</p>
+    <div class="grid2">
+      <div>
+        <h2>The still and the motion are one photograph.</h2>
+        <p class="strong">Most editors flatten a Live Photo into a still, or change the cover frame and leave the three seconds of video untouched. Press and hold afterwards and the look is gone.</p>
+        <p>Filmine develops the still and every frame of the video with the same film, the same portrait light and the same paper. Save it, press and hold in Photos, and the moment still moves and sounds — wearing the look you gave it.</p>
+      </div>
+      <ul class="plain">
+        <li><strong>Only Live Photos.</strong> The picker shows nothing else. Ordinary stills belong to the Photos app.</li>
+        <li><strong>Always a new photo.</strong> The original is never modified or deleted.</li>
+        <li><strong>Frames that breathe.</strong> The paper is part of the picture, so when iOS zooms a Live Photo on press-and-hold, the frame moves with it.</li>
+        <li><strong>No account, no upload.</strong> Everything happens on the device.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Three rooms</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="n">01 / FILM</div>
+        <h3>Film looks</h3>
+        <p>Eleven film looks, from soft portraits and warm daylight to cool shadows and black and white. Two dials — intensity and texture — and nothing else to learn.</p>
+      </div>
+      <div class="card">
+        <div class="n">02 / PORTRAIT</div>
+        <h3>Portrait light</h3>
+        <p>Subtle, Vivid, Soft, Fill Light or Selective. Bring the subject forward with subject fill and background fade. Every slider starts at zero; there is no “beauty” switch.</p>
+      </div>
+      <div class="card">
+        <div class="n">03 / FRAMES</div>
+        <h3>Paper frames</h3>
+        <p>Ten papers, each a named object rather than a setting: Polara, INSTAN mini and wide, Card, Signature and more. Try any of them before unlocking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shots">
+      <img src="assets/shot-02-film.jpg" alt="Film room: eleven film looks with intensity and texture" width="1320" height="2868" loading="lazy">
+      <img src="assets/shot-03-portrait.jpg" alt="Portrait room: five presets, subject fill and background fade" width="1320" height="2868" loading="lazy">
+      <img src="assets/shot-04-frame.jpg" alt="Frames room: paper frames with date and signature" width="1320" height="2868" loading="lazy">
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">On your iPhone</p>
+    <div class="grid2">
+      <div>
+        <h2>Your photos never leave your device.</h2>
+        <p>Filmine has no accounts, no servers, no analytics and no third-party SDKs. The App Store privacy label reads “Data Not Collected”, and the only network traffic the app ever makes is the App Store purchase flow itself.</p>
+        <p><a href="privacy.html">Read the privacy policy</a> — it is the same text that ships inside the app.</p>
+      </div>
+      <div>
+        <h2>Free to develop.</h2>
+        <p>Film and portrait tools are free. Three papers — no frame, Polara and Signature — export free as well. Eight more papers unlock with a yearly plan or a one-time lifetime purchase; eligible new subscribers get a free week first. Prices are shown in the app.</p>
+        <p class="meta">Available in English, 简体中文, 繁體中文, 日本語 and 한국어, following your iPhone language.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Guides</p>
+    <h2>Notes from the darkroom.</h2>
+    <ul class="plain">
+      <li><a href="guides/edit-live-photo-keep-motion.html">How to edit a Live Photo without losing the motion</a></li>
+      <li><a href="guides/film-look-live-photo.html">Adding a film look to a Live Photo — and keeping it steady across every frame</a></li>
+      <li><a href="guides/live-photo-frames-polaroid-style.html">Polaroid-style paper frames for Live Photos</a></li>
+      <li><a href="guides/live-photo-faq.html">Live Photo editing FAQ</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="quote wordmark">a moment, kept alive</p>
+    <div class="cta" style="margin-top:28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+      <a class="btn primary" href="https://apps.apple.com/app/id6808844703">Download on the App Store</a>
+      <a class="btn" href="support.html">Questions? Support</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="sig">the film is mine, let it develop</div>
+    <div class="row">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <a href="press.html">Press kit</a>
+      <a href="guides/">Guides</a>
+      <a href="https://apps.apple.com/app/id6808844703">App Store</a>
+      <a href="mailto:hello@filmine.app">hello@filmine.app</a>
+    </div>
+    <div>© 2026 Filmine. Live Photos, iPhone and App Store are trademarks of Apple Inc. Filmine is an independent app and is not affiliated with Apple.</div>
+  </footer>
 </div>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Add a Film Look to a Live Photo</title>
+<meta name="description" content="Adding a film look to a Live Photo means grading every frame, not just the cover. Why grain flickers, why Display P3 matters, why two sliders is enough.">
+<link rel="canonical" href="https://filmine.app/guides/film-look-live-photo.html">
+<meta name="apple-itunes-app" content="app-id=6808844703">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Filmine">
+<meta property="og:title" content="How to Add a Film Look to a Live Photo">
+<meta property="og:description" content="Adding a film look to a Live Photo means grading every frame, not just the cover. Why grain flickers, why Display P3 matters, why two sliders is enough.">
+<meta property="og:url" content="https://filmine.app/guides/film-look-live-photo.html">
+<meta property="og:image" content="https://filmine.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to add a film look to a Live Photo","description":"Adding a film look to a Live Photo means grading every frame, not just the cover. Why grain flickers, why Display P3 matters, why two sliders is enough.","inLanguage":"en","datePublished":"2026-09-22","dateModified":"2026-09-22","author":{"@type":"Organization","name":"Filmine","url":"https://filmine.app/"},"publisher":{"@type":"Organization","name":"Filmine","url":"https://filmine.app/"},"mainEntityOfPage":"https://filmine.app/guides/film-look-live-photo.html","about":{"@type":"SoftwareApplication","name":"Filmine — Live Photo Darkroom","operatingSystem":"iOS","applicationCategory":"PhotographyApplication","url":"https://apps.apple.com/app/id6808844703"}}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="wordmark" href="../">Filmine</a>
+    <nav>
+      <a href="../#how">How it works</a>
+      <a href="./">Guides</a>
+      <a href="../support.html">Support</a>
+      <a href="../press.html">Press</a>
+    </nav>
+  </header>
+  <article>
+  <p class="dateline mono">GUIDE · SEPTEMBER 2026</p>
+<h1>How to add a film look to a Live Photo</h1>
+
+<p>To add a film look to a Live Photo and keep it moving, you need an editor that applies the grade to the key still <strong>and</strong> every frame of the attached clip, then saves the result as a new Live Photo. A still-image filter cannot do this: it will either flatten the file into a photograph or colour the cover frame while leaving the motion untouched, which produces a visible jump when you press and hold. Filmine takes the second route — eleven film stocks applied frame by frame, with two sliders, entirely on your iPhone.</p>
+
+<h2>Why film emulation is harder in motion than in a still</h2>
+
+<p>A film look is not one adjustment. It is a stack of them: a tone curve that rolls off the highlights instead of clipping them, a colour shift that leans the shadows one way and the highlights another, a halation glow around bright edges, and a texture that stands in for silver grain. On a single frame, you can push any of these as far as you like and judge the result with your eyes. In motion, three new problems appear.</p>
+
+<h2>Frame-to-frame consistency</h2>
+
+<p>If the grade is derived from the content of each frame — an auto-exposure step, an auto white balance, a histogram-driven curve — then every frame gets a slightly different treatment. A hand passing through the shot changes the histogram, the curve shifts, and the whole image breathes. In a still you would never know. In three seconds of playback it reads as an unstable, amateurish pulse. The fix is to make the grade <strong>deterministic</strong>: the same input colour maps to the same output colour in frame one and frame ninety, regardless of what is in the picture.</p>
+
+<h2>Grain that flickers</h2>
+
+<p>Grain is the classic trap. Real film grain is genuinely different on every frame, which is why film has that living quality. But randomly regenerating a heavy digital grain pattern per frame does not reproduce that — it produces a crawling, boiling noise that fights the subject for attention, especially in flat areas like skies and skin. Grain also interacts badly with video compression: fine high-frequency noise is expensive to encode, so it degrades unevenly across the clip. The texture in a good Live Photo grade therefore has to be tuned for motion, not lifted from a stills preset, and it usually has to be gentler than you would choose for a still.</p>
+
+<h2>Wide colour and Display P3</h2>
+
+<p>Modern iPhones capture and display in Display P3, a wider colour space than sRGB. Most film LUTs floating around the internet were authored for sRGB or for Rec.709 video. Applying one of those tables directly to P3 data without converting first pushes saturated colours — red clothing, neon signs, sunsets — outside the range the table ever expected, and they come back crushed or hue-shifted. The correct order of operations is to bring the frame into the working space the look was designed in, apply the look, then convert back for display, keeping the still and the clip on the same path so they end up the same colour. Get that wrong on one half only, and your cover frame and your motion will not match.</p>
+
+<h2>Why Filmine has only two sliders</h2>
+
+<p>Filmine ships eleven film stocks. Each one has exactly two controls: <strong>Intensity</strong> and <strong>Texture</strong>. There is no separate grain slider, no curves panel, no temperature and tint, no split toning. That is a deliberate decision, for three reasons.</p>
+
+<ul>
+  <li><strong>A film stock is a whole recipe, not a pile of parts.</strong> The reason a particular stock looks like itself is the relationship between its curve, its colour crosstalk and its grain. Exposing those as independent sliders lets you break the relationship in one drag, and most people do. Keeping the recipe intact and giving you a single strength control preserves what makes it recognisable.</li>
+  <li><strong>Grain belongs to texture.</strong> Grain is not a layer you add on top; it is inseparable from how the stock renders detail and midtone contrast. Filmine treats it as part of the <strong>Texture</strong> control, which moves the grain character together with the softness and micro-contrast that go with it. That is also why there is no standalone grain slider — a grain amount divorced from the rest of the look is the fastest way to get that crawling flicker described above.</li>
+  <li><strong>Two sliders are two sliders you can actually judge in motion.</strong> Evaluating a look on a three-second clip means watching it play, not scrubbing a static preview. Fewer controls means fewer play-throughs before you are happy.</li>
+</ul>
+
+<h2>A workflow that tends to produce good results</h2>
+
+<ol>
+  <li>Start from a Live Photo with something genuinely moving in it — steam, hair, water, a turn of the head. Film looks reward motion.</li>
+  <li>Pick a stock by mood rather than by name, and let it play once at default settings before touching anything.</li>
+  <li>Pull <strong>Intensity</strong> back further than instinct suggests. A grade that looks perfect frozen is usually about twenty per cent too strong once it moves.</li>
+  <li>Set <strong>Texture</strong> last, watching a flat area — sky, a wall, a cheek — rather than a detailed one.</li>
+  <li>Export, then long-press the result in Photos and check that the colour does not jump as playback starts.</li>
+</ol>
+
+<h2>What Filmine does and does not do</h2>
+
+<p>Filmine only handles Live Photos; ordinary stills will not appear in the picker. Alongside the eleven film stocks there are five portrait presets with two sliders of their own — subject fill and background fade — and ten frames plus a no-frame option, with no parameters. Film and portrait are free. Three frames (None, Polara and Signature) are free as well; the other eight come with an annual subscription that includes a seven-day trial for new users, or a one-time unlock.</p>
+
+<p>Everything is processed on the device. There is no account, no server, no analytics and no data collection. The output is always a new Live Photo — your original file is left exactly as it was, and both the motion and the sound are preserved. Because there is real per-frame work involved, exporting takes a few seconds. Filmine requires iOS 18 or later, runs on iPhone only, and does not offer collage, free-form cropping, video trimming, custom text or AI generation.</p>
+
+<p class="cta">Ready to give your Live Photos a film look that holds up in motion? <a href="https://apps.apple.com/app/id6808844703">Download Filmine on the App Store</a> — Filmine — Live Photo Darkroom, free on the App Store.</p>
+  </article>
+  <footer>
+    <div class="sig">the film is mine, let it develop</div>
+    <div class="row">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../support.html">Support</a>
+      <a href="../press.html">Press kit</a>
+      <a href="./">Guides</a>
+      <a href="https://apps.apple.com/app/id6808844703">App Store</a>
+      <a href="mailto:hello@filmine.app">hello@filmine.app</a>
+    </div>
+    <div>© 2026 Filmine. Live Photos, iPhone and App Store are trademarks of Apple Inc. Filmine is an independent app and is not affiliated with Apple.</div>
+  </footer>
+</div>
+</body>
+</html>
